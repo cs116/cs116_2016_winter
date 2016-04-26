@@ -1,0 +1,90 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication1;
+
+/**
+ *
+ * @author gpcorser
+ */
+public class JavaApplication1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Tax tx = new Tax();
+        //System.out.println(tx.getTax());
+    }
+    
+} // end class: JavaApplication1
+
+class Tax {
+    
+    public static final int SINGLE_FILER = 0;
+    public static final int MARRIED_JOINTLY = 1;
+    public static final int MARRIED_SEPARATELY = 2;
+    public static final int HEAD_OF_HOUSEHOLD = 3;
+    
+    // filingStatus must be one of the constants above
+    private int filingStatus;
+    
+    public static int [][] brackets = {
+        {27050, 45200, 22600, 36250}, 
+        {65550, 109250, 54625, 93650},
+        {136750, 166500, 83250, 151650},
+        {297350, 297350, 148675, 297350}, 
+        {Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE}
+    };
+    
+    public static double [] rates = {0.15, 0.275, 0.305, 0.355, 0.391};
+   
+    private double taxableIncome;
+    
+    /**
+     * @param status the filing status of the taxpayer
+     */
+    public void setFilingStatus (int status) {
+        this.filingStatus = status;
+    }
+    
+    /**
+     * @param none
+     */
+    public int getFilingStatus () {
+        return this.filingStatus;
+    }
+        
+    /**
+     * @param income the taxable income of the taxpayer
+     */
+    public void setTaxableIncome (double income) {
+        this.taxableIncome = income;
+    }
+    
+    /**
+     * @param none
+     */
+    public double getTaxableIncome () {
+        return this.taxableIncome;
+    }
+    
+    Tax () {
+        this.taxableIncome = 65550;
+        this.filingStatus = Tax.SINGLE_FILER;
+    }
+    
+    /**
+     * @param fs the filing status of the taxpayer
+     * @param br the 2d table of tax brackets
+     * @param rt is the 1d array of taz rates
+     * @param ti the taxable income of the taxpayer
+     */
+    Tax (int fs, int [][] br, double [] rt, double ti) {
+        this.filingStatus = fs;
+    }
+    
+}

@@ -1,0 +1,46 @@
+/* Exercise07.java
+ * This program demonstrates arrays
+		Problem: Read one hundred numbers, 
+		compute their average, and find out how many 
+		numbers are above the average. 
+ * Input: none
+ * Processing: 
+		// 1. declare variables
+		// 2. populate array and compute average
+		// 3. count number of array elements above average
+	Output: 
+		// 4. print average and count
+ */
+ 
+public class Exercise07 {
+
+    public static void main(String args[]) {
+		
+		// 1. declare variables
+		int [] arr = new int[100];
+		double average = 0;
+		int sum = 0;
+		int count = 0; 
+		
+		// 2. populate array and compute average
+		for (int i = 0; i < 100; i++) {
+			arr[i] = (int)(100 * Math.random());
+			sum += arr[i];
+		}
+		average = sum / 100.0; 
+		
+		// 3. count number of array elements above average
+		for(int number : arr) {
+			if (arr[number] > average) count++; 
+		}
+		
+		// 4. print average and count
+		System.out.println("Average: " + average + " Count: " + count);
+	
+	}
+	
+}
+
+
+
+

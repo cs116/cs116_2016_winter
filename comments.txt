@@ -1,0 +1,32 @@
+/* *******************************************************************
+ * filename     : ClassName.java
+ * author       : George Corser
+ * svsuid       : gpcorser
+ * course       : cs116 
+ * section      : 01-TR (also, 02-MW)
+ * semester		: Winter 2016
+ *
+ * description  : This program creates a 10x10 2d array of integers
+ *				  by reading an input file (input.data),
+ *				  prints the array and the sum of its contents,
+ *				  prints the sum of column with indwx [3], and 
+ *				  prints the index number of the row with largest sum.
+ *				  The purpose of this program is to demonstrate concepts
+ *				  of multidimennsional arrays in Java.
+ *
+ * input        : ten integers in an input file
+ * processing   : The program does the following. 
+ *      		  1. declare 10x10 2d array
+ *      		  2. populate 10x10 2d array with random integers 
+ *      		  3. print the array
+ *      		  4. print the sum
+ *      		  5. print sum of column with index [3]
+ *      		  6. print index number of row with largest sum
+ * output       : printed 10x10 array of random integers and sum
+ *
+ * precondition : an input file must exist in the same directory as
+ *				  the directory in which the program executes
+ * postcondition: information printed to the screen, 
+ * 				  as listed in processing items 3 through 6, above. 
+ * ******************************************************************* 
+ */
